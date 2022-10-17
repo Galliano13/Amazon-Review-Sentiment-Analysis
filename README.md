@@ -21,7 +21,7 @@ We used customer reviews dataset from kaggle that contains 3150 customer reviews
 - verified_reviews : Customers review
 - feedback : boolean to say whether a customers is happy or not (1 = positive, 0 = negative)
 
-3. # Explore Dataset
+# 3. Explore Dataset
 
 ## Checking missing values
 
@@ -50,7 +50,7 @@ The wordcloud above tell us the words that appear the most on reviews of the pro
 
 The wordcloud above tell us the words that appear the most on negative reviews of the products
 
-# Data Cleaning
+# 4. Data Cleaning
 
 ## Drop Unnecesary Columns
 
@@ -64,7 +64,7 @@ We turn variation column into numerical data by creating dummies for variation c
 
 The next thing to do is drop variation column on reviews dataset and concatinate it with our variation dummies.
 
-# Perform Data Cleaning by Applying Punctuation Removal, Stop Words Removal, and Count Vectorizer
+# 5. Perform Data Cleaning by Applying Punctuation Removal, Stop Words Removal, and Count Vectorizer
 
 We use nltk library to define a pipeline to clean up all the messages. The pipeline will peforms the following :
 1. Remove punctuation (ex : , ! . ? / etc )
@@ -82,11 +82,11 @@ Finally we do the following before build the model :
 1. Concat review dataset with vectorized reviews column
 2. Drop verified_review and feedback columns
 
-# Train a Naive Bayes Classifier Model
+# 6. Train a Naive Bayes Classifier Model
 
 We split the dataset into X Train, X Test, Y Train, and Y Test. We used 80% of our data into training dataset and 20% of our data into testing dataset. After split the dataset, we train our data using a MultinomialNB algorithm.
 
-# Asses Trained Model Performance
+# 7. Asses Trained Model Performance
 
 The main evaluation metric that we are used are confusion matrix and F1 score. The F-score, also called the F1-score, is a measure of a model's accuracy on a dataset. We can say F1-score is model accuracy. Confusion matrix is performance measurement for machine learning classification problem where output can be two or more classes. It is a table with 4 different combinations of predicted and actual values.
 
@@ -102,7 +102,7 @@ Based on matrix above, we correctly classify around 5.700 positives feedback and
 
 Table above shows that our logistic regression model have F1 Score of 0.93, it means accuracy of our Naive Bayes model is 93%
 
-# Train and Evaluate a Logistic Classifier Model
+# 8. Train and Evaluate a Logistic Classifier Model
 
 ## Train a Logistic Classifier Model
 
