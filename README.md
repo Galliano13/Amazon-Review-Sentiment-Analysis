@@ -52,7 +52,7 @@ The wordcloud above tell us the words that appear the most on negative reviews o
 
 # Data Cleaning
 
-## Drop Unnecesarry Columns
+## Drop Unnecesary Columns
 
 We drop rating and date columns because we don't need them for our predictive model.
 
